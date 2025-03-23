@@ -8,11 +8,12 @@ Re/Syst.ai is a React-based chat application with a knowledge base dashboard, de
 
 ## Aim
 
-The primary aim of Re/Syst.ai is to create a user-friendly chat interface integrated with a company dashboard where:
-- Users can engage in conversations stored in Firestore.
+The primary aim of Re/Syst.ai is to create a user-friendly Retrieval-Augumented-Generation chat App interface for Companyies where:
+- Users can engage in conversations with the App to Undertand FAQs personal to internal working of Organisation.
 - Admins can manage a shared knowledge base and other admins.
 - Non-admin users can activate admin privileges using predefined product keys.
 - The app provides a responsive, theme-switchable UI for an enhanced user experience.
+- It provide a chat Ai playground for users to experiment with
 
 ---
 
@@ -41,7 +42,7 @@ The primary aim of Re/Syst.ai is to create a user-friendly chat interface integr
 ## Project Structure
 
 ```
-rag-chat-ui/
+Frontend/
 ├── src/
 │   ├── assets/                # Static assets (icons, images)
 │   │   ├── chat.png
