@@ -2,8 +2,8 @@
 
 Re/Syst.ai is a React-based chat application with a knowledge base dashboard, designed to provide a seamless user experience for chatting and managing company data. It integrates Firebase for authentication, Firestore for data storage, and includes features like chat management, admin privileges, and a knowledge base for uploading and sharing content. The app supports light and dark themes and uses Google authentication for user login.
 
-**Live Demo**: The site is live and can be accessed at [HERE](https://resyst-ai-v1.netlify.app).
-
+**Live Demo**: The site is live and can be accessed [HERE](https://resyst-ai-v1.netlify.app).
+![Demo Animation](src\assets\readme-data\intro-banner.gif)
 ---
 
 ## Aim
@@ -37,6 +37,12 @@ The primary aim of Re/Syst.ai is to create a user-friendly Retrieval-Augumented-
 - **Responsive Design**:
   - Adapts to various screen sizes with a clean, modern UI.
 
+
+![User Screen](src\assets\readme-data\user.png)
+![New Chat window](src\assets\readme-data\new-chat.png)
+![Admin Screen](src\assets\readme-data\admin-chat.png)
+![Product Key Actication](src\assets\readme-data\product-key.png)
+![Knowlege Base Dashbaord](src\assets\readme-data\kb.png)
 ---
 
 ## Project Structure
