@@ -4,6 +4,7 @@ Re/Syst.ai is a React-based chat application with a knowledge base dashboard, de
 
 **Live Demo**: The site is live and can be accessed [HERE](https://resyst-ai-v1.netlify.app).
 
+## Animated Demos
 ![Demo Banner](src/assets/readme-data/intro-banner.gif)
 ---
 
