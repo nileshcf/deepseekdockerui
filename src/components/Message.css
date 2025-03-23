@@ -1,0 +1,50 @@
+/* Base styles for chat messages */
+.message {
+  margin-bottom: 20px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  max-width: 75%;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for user messages (right-aligned) */
+.message.user {
+  background: #34C759;
+  color: white;
+  margin-left: auto;
+}
+
+/* Styles for AI messages (left-aligned) */
+.message.ai {
+  margin-right: auto;
+}
+
+/* Dark theme styles for AI messages */
+.app.dark .message.ai {
+  background: #3A5B53;
+  color: #D4F4DD;
+}
+
+/* Light theme styles for AI messages */
+.app.light .message.ai {
+  background: #E6F0FA;
+  color: #1A3C34;
+}
+
+/* Styles for bot and user icons */
+.bot-icon,
+.user-icon {
+  width: 26px;
+  height: 26px;
+  margin-right: 12px;
+}
+
+/* Adjust margin for user icon in user messages */
+.message.user .user-icon {
+  margin-left: 12px;
+  margin-right: 0;
+}

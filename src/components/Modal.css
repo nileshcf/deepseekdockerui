@@ -1,0 +1,119 @@
+/* Overlay styles for the modal (covers the entire screen) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Main modal content styles */
+.modal {
+  padding: 25px;
+  border-radius: 12px;
+  width: 450px;
+  max-width: 90%;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+  transform: scale(1);
+}
+
+/* Remove outline when modal overlay is focused */
+.modal-overlay:focus {
+  outline: none;
+}
+
+/* Dark theme background for the modal */
+.app.dark .modal {
+  background: #2A4B43;
+}
+
+/* Light theme background for the modal */
+.app.light .modal {
+  background: #F5F7FA;
+}
+
+/* Modal message text styles */
+.modal-message {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Dark theme color for modal message */
+.app.dark .modal-message {
+  color: #D4F4DD;
+}
+
+/* Light theme color for modal message */
+.app.light .modal-message {
+  color: #1A3C34;
+}
+
+/* Container for modal buttons */
+.modal-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* Base styles for modal buttons */
+.modal-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+/* Hover effect for modal buttons */
+.modal-button:hover {
+  transform: translateY(-1px);
+}
+
+/* Cancel button styles */
+.modal-button.cancel {
+  background: #EF4444;
+  color: white;
+}
+
+/* Hover effect for cancel button */
+.modal-button.cancel:hover {
+  background: #DC2626;
+}
+
+/* Confirm button styles */
+.modal-button.confirm {
+  background: #34C759;
+  color: white;
+}
+
+/* Hover effect for confirm button */
+.modal-button.confirm:hover {
+  background: #2EA44F;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 480px) {
+  .modal {
+    padding: 20px;
+    width: 90%;
+  }
+
+  .modal-message {
+    font-size: 1.1rem;
+  }
+
+  .modal-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}

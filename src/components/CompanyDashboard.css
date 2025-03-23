@@ -1,0 +1,383 @@
+/* Main container for the company dashboard */
+.company-dashboard {
+  width: 100%;
+  max-width: 1200px;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+/* Dark theme background for the dashboard */
+.app.dark .company-dashboard {
+  background: #2A4B43;
+}
+
+/* Light theme background for the dashboard */
+.app.light .company-dashboard {
+  background: #F5F7FA;
+}
+
+/* Dashboard title styles */
+.company-dashboard h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Dark theme color for the dashboard title */
+.app.dark .company-dashboard h2 {
+  color: #D4F4DD;
+}
+
+/* Light theme color for the dashboard title */
+.app.light .company-dashboard h2 {
+  color: #1A3C34;
+}
+
+/* Grid layout for the dashboard sections */
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  .dashboard-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Styles for each admin section container */
+.admin-section {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Admin section heading styles */
+.admin-section h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Dark theme color for admin section heading */
+.app.dark .admin-section h3 {
+  color: #D4F4DD;
+}
+
+/* Light theme color for admin section heading */
+.app.light .admin-section h3 {
+  color: #1A3C34;
+}
+
+/* Container for the admin deletion section */
+.admin-delete-section {
+  margin-bottom: 20px;
+}
+
+/* Admin deletion section subheading styles */
+.admin-delete-section h4 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+/* Dark theme color for admin deletion subheading */
+.app.dark .admin-delete-section h4 {
+  color: #D4F4DD;
+}
+
+/* Light theme color for admin deletion subheading */
+.app.light .admin-delete-section h4 {
+  color: #1A3C34;
+}
+
+/* List styles for admin deletion section */
+.admin-delete-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Individual admin item styles */
+.admin-delete-section li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+/* Dark theme styles for admin list items */
+.app.dark .admin-delete-section li {
+  background: #3A5B53;
+  color: #D4F4DD;
+}
+
+/* Light theme styles for admin list items */
+.app.light .admin-delete-section li {
+  background: #E6F0FA;
+  color: #1A3C34;
+}
+
+/* Delete admin button styles */
+.delete-admin-button {
+  padding: 6px 12px;
+  background: #EF4444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+/* Hover effect for delete admin button */
+.delete-admin-button:hover {
+  background: #DC2626;
+}
+
+/* Error message styles within admin section */
+.admin-section .error {
+  color: #EF4444;
+  font-size: 0.9rem;
+  margin: 10px 0;
+}
+
+/* Container for the upload section */
+.upload-section {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Upload section heading styles */
+.upload-section h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Dark theme color for upload section heading */
+.app.dark .upload-section h3 {
+  color: #D4F4DD;
+}
+
+/* Light theme color for upload section heading */
+.app.light .upload-section h3 {
+  color: #1A3C34;
+}
+
+/* Upload form layout styles */
+.upload-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Styles for select, textarea, and file input in upload form */
+.upload-section select,
+.upload-section textarea,
+.upload-section input[type="file"] {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark theme styles for upload form inputs */
+.app.dark .upload-section select,
+.app.dark .upload-section textarea,
+.app.dark .upload-section input[type="file"] {
+  background: #3A5B53;
+  color: #D4F4DD;
+}
+
+/* Light theme styles for upload form inputs */
+.app.light .upload-section select,
+.app.light .upload-section textarea,
+.app.light .upload-section input[type="file"] {
+  background: #E6F0FA;
+  color: #1A3C34;
+}
+
+/* Textarea specific styles for content input */
+.upload-section textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+/* Upload button styles */
+.upload-section button {
+  padding: 12px;
+  background: #34C759;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+/* Hover effect for upload button */
+.upload-section button:hover {
+  background: #2EA44F;
+}
+
+/* Knowledge base section styles (spans both columns) */
+.knowledge-base-section {
+  grid-column: span 2;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustment for knowledge base section on smaller screens */
+@media (max-width: 768px) {
+  .knowledge-base-section {
+    grid-column: span 1;
+  }
+}
+
+/* Knowledge base section heading styles */
+.knowledge-base-section h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Dark theme color for knowledge base heading */
+.app.dark .knowledge-base-section h3 {
+  color: #D4F4DD;
+}
+
+/* Light theme color for knowledge base heading */
+.app.light .knowledge-base-section h3 {
+  color: #1A3C34;
+}
+
+/* Refresh button styles for knowledge base */
+.knowledge-base-section .refresh-button {
+  padding: 10px 20px;
+  background: #A855F7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  margin-bottom: 20px;
+}
+
+/* Hover effect for refresh button */
+.knowledge-base-section .refresh-button:hover {
+  background: #9333EA;
+}
+
+/* Paragraph text styles in knowledge base */
+.knowledge-base-section p {
+  font-size: 1.1rem;
+}
+
+/* Dark theme color for knowledge base text */
+.app.dark .knowledge-base-section p {
+  color: #D4F4DD;
+}
+
+/* Light theme color for knowledge base text */
+.app.light .knowledge-base-section p {
+  color: #1A3C34;
+}
+
+/* List styles for knowledge base items */
+.knowledge-base-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Individual knowledge base item styles */
+.knowledge-base-section li {
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* Dark theme styles for knowledge base items */
+.app.dark .knowledge-base-section li {
+  background: #3A5B53;
+  color: #D4F4DD;
+}
+
+/* Light theme styles for knowledge base items */
+.app.light .knowledge-base-section li {
+  background: #E6F0FA;
+  color: #1A3C34;
+}
+
+/* Container for each upload item in knowledge base */
+.upload-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Styles for the content of each upload */
+.upload-content {
+  font-size: 1rem;
+}
+
+/* Metadata styles for upload items (uploader, date) */
+.upload-meta {
+  display: flex;
+  gap: 15px;
+  font-size: 0.9rem;
+  color: #A3BFFA;
+}
+
+/* Dark theme color for upload metadata */
+.app.dark .upload-meta {
+  color: #A3BFFA;
+}
+
+/* Light theme color for upload metadata */
+.app.light .upload-meta {
+  color: #4B5EAA;
+}
+
+/* Delete button styles for uploads */
+.delete-upload-button {
+  padding: 6px 12px;
+  background: #EF4444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+/* Hover effect for delete upload button */
+.delete-upload-button:hover {
+  background: #DC2626;
+}
+
+/* Link styles within knowledge base (e.g., URLs) */
+.knowledge-base-section a {
+  color: #A855F7;
+  text-decoration: none;
+}
+
+/* Hover effect for links in knowledge base */
+.knowledge-base-section a:hover {
+  text-decoration: underline;
+}

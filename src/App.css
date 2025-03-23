@@ -1,38 +1,338 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* Main app container styles */
+.app {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', Arial, sans-serif;
+  transition: background 0.3s ease;
+}
+
+/* Dark theme background for the app */
+.app.dark {
+  background: #1A3C34;
+}
+
+/* Light theme background for the app */
+.app.light {
+  background: #E6F0FA;
+}
+
+/* Header section styles */
+.header {
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark theme background for the header */
+.app.dark .header {
+  background: rgba(26, 60, 52, 0.95);
+}
+
+/* Light theme background for the header */
+.app.light .header {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* Header title styles */
+.header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+/* Dark theme color for the header title */
+.app.dark .header h1 {
+  color: #D4F4DD;
+}
+
+/* Light theme color for the header title */
+.app.light .header h1 {
+  color: #1A3C34;
+}
+
+/* Container for header buttons (nav, key, theme, logout/login) */
+.header-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+/* Base styles for authentication buttons (login/logout) */
+.header-buttons .auth-button {
+  padding: 4px 16px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+/* Styles for the logout button */
+.header-buttons .auth-button.logout {
+  background: #A855F7;
+  color: white;
+  border: none;
+  padding: 4px;
+}
+
+/* Hover effect for the logout button */
+.header-buttons .auth-button.logout:hover {
+  background: #9333EA;
+}
+
+/* Styles for the Google login button */
+.header-buttons .auth-button.google-login {
+  background: white;
+  color: #1A3C34;
+  border: 1px solid #A3BFFA;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect for the Google login button */
+.header-buttons .auth-button.google-login:hover {
+  background: #F5F7FA;
+}
+
+/* Google icon styles (used in the login button) */
+.google-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+}
+
+/* Logout icon styles (used in the logout button) */
+.logout-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Theme toggle button styles */
+.theme-toggle {
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Theme icon styles (night/day mode) */
+.theme-icon {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.2s ease;
+}
+
+/* Hover effect for the theme icon (scales up slightly) */
+.theme-toggle:hover .theme-icon {
+  transform: scale(1.1);
+}
+
+/* Navigation button styles (toggles between chat and dashboard) */
+.nav-button {
+  padding: 4px 16px;
+  background: #34C759;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+/* Hover effect for the navigation button */
+.nav-button:hover {
+  background: #2EA44F;
+}
+
+/* Navigation icon styles (used in the nav button) */
+.nav-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+}
+
+/* Main content area styles */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Login prompt styles (shown when user is not logged in) */
+.login-prompt {
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100%;
+}
+
+/* Login image styles (displayed in the login prompt) */
+.login-image {
+  max-width: 500px;
+  max-height: 500px;
+  width: auto;
+  height: auto;
+  margin-bottom: 0px;
+  border-radius: 0px;
+}
+
+/* Login prompt text styles */
+.login-prompt p {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+/* Dark theme color for the login prompt text */
+.app.dark .login-prompt p {
+  color: #D4F4DD;
+}
+
+/* Light theme color for the login prompt text */
+.app.light .login-prompt p {
+  color: #1A3C34;
+}
+
+/* Key button styles (for entering product key, shown to non-admins) */
+.key-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+}
+
+/* Key icon styles (used in the key button) */
+.key-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Modal overlay styles (background for the product key modal) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal content styles (for the product key entry form) */
+.modal {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark theme styles for the modal */
+.app.dark .modal {
+  background: #2A4B43;
+  color: #D4F4DD;
+}
+
+/* Light theme styles for the modal */
+.app.light .modal {
+  background: #F5F7FA;
+  color: #1A3C34;
+}
+
+/* Modal title styles */
+.modal h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* Input field styles for entering the product key */
+.key-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* Dark theme styles for the product key input */
+.app.dark .key-input {
+  background: #3A5B53;
+  color: #D4F4DD;
+  border-color: #D4F4DD;
+}
+
+/* Light theme styles for the product key input */
+.app.light .key-input {
+  background: #E6F0FA;
+  color: #1A3C34;
+  border-color: #1A3C34;
+}
+
+/* Error message styles (for invalid product key) */
+.error {
+  color: #EF4444;
+  font-size: 0.9rem;
+  margin: 10px 0;
+}
+
+/* Success message styles (for successful activation) */
+.success {
+  color: #34C759;
+  font-size: 0.9rem;
+  margin: 10px 0;
+}
+
+/* Container for modal buttons (submit and cancel) */
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Base styles for modal buttons (submit and cancel) */
+.confirm-button,
+.cancel-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Styles for the confirm (submit) button */
+.confirm-button {
+  background: #34C759;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Hover effect for the confirm button */
+.confirm-button:hover {
+  background: #2EA44F;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Styles for the cancel button */
+.cancel-button {
+  background: #EF4444;
+  color: white;
+}
+
+/* Hover effect for the cancel button */
+.cancel-button:hover {
+  background: #DC2626;
 }

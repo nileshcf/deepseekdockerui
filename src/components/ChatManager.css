@@ -1,0 +1,192 @@
+/* Main container for the chat manager (chat list + chat content) */
+.chat-manager {
+  display: flex;
+  width: 100%;
+  max-width: 1100px;
+  height: 85vh;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Styles for the chat list sidebar */
+.chat-list {
+  width: 280px;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Dark theme background for the chat list */
+.app.dark .chat-list {
+  background: #2A4B43;
+}
+
+/* Light theme background for the chat list */
+.app.light .chat-list {
+  background: #F5F7FA;
+}
+
+/* Styles for the 'New Chat' button */
+.new-chat-button {
+  width: 100%;
+  padding: 12px;
+  background: #34C759;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  margin-bottom: 20px;
+}
+
+/* Hover effect for the 'New Chat' button */
+.new-chat-button:hover {
+  background: #2EA44F;
+}
+
+/* Container for each chat item and its action buttons */
+.chat-item-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+/* Styles for individual chat items in the list */
+.chat-item {
+  flex: 1;
+  padding: 12px 15px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s ease;
+}
+
+/* Dark theme styles for chat items */
+.app.dark .chat-item {
+  background: #3A5B53;
+  color: #D4F4DD;
+}
+
+/* Light theme styles for chat items */
+.app.light .chat-item {
+  background: #E6F0FA;
+  color: #1A3C34;
+}
+
+/* Dark theme styles for the active chat item */
+.app.dark .chat-item.active {
+  background: #A855F7;
+  color: white;
+}
+
+/* Light theme styles for the active chat item */
+.app.light .chat-item.active {
+  background: #A3BFFA;
+  color: #1A3C34;
+}
+
+/* Dark theme hover effect for chat items */
+.app.dark .chat-item:hover {
+  background: #4A6B63;
+}
+
+/* Light theme hover effect for chat items */
+.app.light .chat-item:hover {
+  background: #D4E2F1;
+}
+
+/* Base styles for chat action buttons (edit/delete) */
+.chat-action-button {
+  padding: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Hover effect for the delete action button */
+.chat-action-button.delete:hover {
+  opacity: 0.8;
+}
+
+/* Hover effect for the edit action button */
+.chat-action-button.edit:hover {
+  opacity: 0.8;
+}
+
+/* Styles for action icons (edit/delete) */
+.action-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Container for editing chat titles */
+.chat-edit {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+/* Input field styles for editing chat titles */
+.chat-title-input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* Dark theme styles for the chat title input */
+.app.dark .chat-title-input {
+  background: #3A5B53;
+  color: #D4F4DD;
+}
+
+/* Light theme styles for the chat title input */
+.app.light .chat-title-input {
+  background: #E6F0FA;
+  color: #1A3C34;
+}
+
+/* Save button styles for confirming chat title edits */
+.save-button {
+  padding: 8px 12px;
+  background: #34C759;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Hover effect for the save button */
+.save-button:hover {
+  background: #2EA44F;
+}
+
+/* Container for the selected chat's content */
+.chat-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Placeholder text styles when no chat is selected */
+.chat-content p {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+/* Dark theme color for placeholder text */
+.app.dark .chat-content p {
+  color: #D4F4DD;
+}
+
+/* Light theme color for placeholder text */
+.app.light .chat-content p {
+  color: #1A3C34;
+}

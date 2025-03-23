@@ -1,0 +1,43 @@
+/* Main container for the chat window */
+.chat-window {
+  width: 100%;
+  max-width: 820px;
+  height: 100%;
+  border-radius: 0 12px 12px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Dark theme background for the chat window */
+.app.dark .chat-window {
+  background: #2A4B43;
+}
+
+/* Light theme background for the chat window */
+.app.light .chat-window {
+  background: #F9FAFB;
+}
+
+/* Container for the message list */
+.messages {
+  flex: 1;
+  padding: 25px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+/* Dark theme scrollbar styles for the messages */
+.app.dark .messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Dark theme scrollbar thumb styles */
+.app.dark .messages::-webkit-scrollbar-thumb {
+  background: #A855F7;
+  border-radius: 3px;
+}
+
+/* Light theme scrollbar thumb styles */
+.app.light .messages::-webkit-scrollbar-thumb {
+  background: #A3BFFA;
+}
