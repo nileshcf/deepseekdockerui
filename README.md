@@ -182,8 +182,8 @@ service cloud.firestore {
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/rag-chat-ui.git
-   cd rag-chat-ui
+   git clone https://github.com/your-username/deepseekdockerui.git
+   cd deepseekdockerui
    ```
 
 2. **Install Dependencies**:
