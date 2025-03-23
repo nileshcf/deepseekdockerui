@@ -39,11 +39,15 @@ The primary aim of Re/Syst.ai is to create a user-friendly Retrieval-Augumented-
 - **Responsive Design**:
   - Adapts to various screen sizes with a clean, modern UI.
 
-
+## User Screen
 ![User Screen](src/assets/readme-data/user.png)
+## New Chat window
 ![New Chat window](src/assets/readme-data/new-chat.png)
+## Admin Screen
 ![Admin Screen](src/assets/readme-data/admin-chat.png)
+## Product Key Actication
 ![Product Key Actication](src/assets/readme-data/product-key.png)
+## Knowlege Base Dashbaord
 ![Knowlege Base Dashbaord](src/assets/readme-data/kb.png)
 ---
 
