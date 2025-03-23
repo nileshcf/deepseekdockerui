@@ -1,11 +1,7 @@
----
-
-### README.md
-
 ```markdown
-# Re/Syst.ai - RAG Chat UI
+# Re/Syst.ai - RAG Chat UI (Development Branch)
 
-Re/Syst.ai is a React-based chat application with a knowledge base dashboard, designed to provide a seamless user experience for chatting and managing company data. It integrates Firebase for authentication, Firestore for data storage, and includes features like chat management, admin privileges, and a knowledge base for uploading and sharing content. The app supports light and dark themes and uses Google authentication for user login.
+Re/Syst.ai is a React-based chat application with a knowledge base dashboard, designed to provide a seamless user experience for chatting and managing company data. This is the `development` branch, which may include experimental features and ongoing enhancements. It integrates Firebase for authentication, Firestore for data storage, and includes features like chat management, admin privileges, and a knowledge base for uploading and sharing content. The app supports light and dark themes and uses Google authentication for user login.
 
 **Live Demo**: The site is live and can be accessed at [https://resyst-ai-v1.netlify.app](https://resyst-ai-v1.netlify.app).
 
@@ -99,7 +95,6 @@ rag-chat-ui/
 - **`users`**: User-specific data, including nested `chats` collection for chat history.
 
 ### Security Rules
-The Firestore security rules ensure controlled access to data:
 ```javascript
 rules_version = '2';
 service cloud.firestore {
@@ -174,16 +169,21 @@ service cloud.firestore {
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/rag-chat-ui.git
-   cd rag-chat-ui
+   git clone https://github.com/nileshcf/deepseekdockerui.git
+   cd deepseekdockerui
    ```
 
-2. **Install Dependencies**:
+2. **Switch to Development Branch**:
+   ```bash
+   git checkout development
+   ```
+
+3. **Install Dependencies**:
    ```bash
    npm install
    ```
 
-3. **Set Up Firebase**:
+4. **Set Up Firebase**:
    - Create a Firebase project at [console.firebase.google.com](https://console.firebase.google.com).
    - Enable Google Authentication in the Authentication section.
    - Enable Firestore and set up the following collections:
@@ -200,17 +200,17 @@ service cloud.firestore {
        storageBucket: "your-storage-bucket",
        messagingSenderId: "your-messaging-sender-id",
        appId: "your-app-id",
-       measurementId: "your-measurement-id",
+       measurementId: "your-measurement-id"
      };
      ```
 
-4. **Run the Application**:
+5. **Run the Application**:
    ```bash
    npm start
    ```
    - The app will open in your browser at `http://localhost:3000`.
 
-5. **Test the App**:
+6. **Test the App**:
    - Sign in with Google.
    - Create chats as a regular user.
    - Use a product key (e.g., `AB12-CD34-EF56-GH78`) to activate admin privileges.
@@ -233,15 +233,16 @@ npm install react firebase react-dom
 
 ## Notes
 
-- **File Uploads**: Currently mocked in Firestore with file names. For production, integrate Firebase Storage to store actual files and save URLs in Firestore.
-- **Chatbot**: The AI responses are static greetings. Integrate a backend (e.g., DeepSeek API) for dynamic responses.
-- **Security**: Ensure Firebase security rules are tested thoroughly in production.
+- **Development Branch**: This branch may include work-in-progress features and is not guaranteed to be stable.
+- **File Uploads**: Currently mocked in Firestore with file names. For production, integrate Firebase Storage.
+- **Chatbot**: AI responses are static greetings. Future updates may integrate a backend like DeepSeek API.
+- **Security**: Test Firebase security rules thoroughly before production use.
 
 ---
 
 ## Contributing
 
-Feel free to fork this repository, submit issues, or create pull requests to enhance the project!
+Feel free to submit issues or create pull requests to enhance the `development` branch!
 
 ---
 
@@ -249,36 +250,3 @@ Feel free to fork this repository, submit issues, or create pull requests to enh
 
 This project is licensed under the MIT License.
 ```
-
----
-
-### Explanation of the `README.md`
-
-1. **Project Overview**:
-   - Describes Re/Syst.ai as a chat and dashboard app with Firebase integration.
-
-2. **Aim**:
-   - Outlines the purpose of providing a chat interface and admin tools.
-
-3. **Features**:
-   - Lists key functionalities like chat management, admin dashboard, authentication, and theming.
-
-4. **Project Structure**:
-   - Details the file structure based on the provided components and assets.
-
-5. **Firebase Setup**:
-   - Documents the Firestore collections, security rules, product keys, and Google authentication setup.
-
-6. **How It Works**:
-   - Explains the app’s workflow from authentication to chat and admin features.
-
-7. **Steps to Run**:
-   - Provides clear instructions to clone, install, configure Firebase, and run the app locally.
-
-8. **Dependencies**:
-   - Lists the main npm packages required.
-
-9. **Notes**:
-   - Highlights areas for improvement (e.g., file uploads, chatbot integration).
-
----
