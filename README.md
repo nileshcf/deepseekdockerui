@@ -1,6 +1,6 @@
 # Re/Syst.ai - RAG Chat UI
 
-Re/Syst.ai is a React-based chat application with a knowledge base dashboard, designed to provide a seamless user experience for chatting and managing company data. It integrates Firebase for authentication, Firestore for data storage, and includes features like chat management, admin privileges, and a knowledge base for uploading and sharing content. The app supports light and dark themes and uses Google authentication for user login.
+Re/Syst.ai is a user-friendly Retrieval-Augmented-Generation (RAG) chat application designed for companies, leveraging DeepSeek FM and Docker. This `development` branch explores an innovative interface where users can converse with an AI to understand organization-specific FAQs, admins can manage a shared knowledge base and privileges, and non-admins can unlock admin access with predefined product keys. Featuring a responsive, theme-switchable UI and a chat AI playground, Re/Syst.ai aims to enhance internal communication and experimentation.
 
 **Live Demo**: The site is live and can be accessed [HERE](https://resyst-ai-v1.netlify.app).
 
