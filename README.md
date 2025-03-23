@@ -1,8 +1,3 @@
----
-
-### README.md
-
-```markdown
 # Re/Syst.ai - RAG Chat UI
 
 Re/Syst.ai is a React-based chat application with a knowledge base dashboard, designed to provide a seamless user experience for chatting and managing company data. It integrates Firebase for authentication, Firestore for data storage, and includes features like chat management, admin privileges, and a knowledge base for uploading and sharing content. The app supports light and dark themes and uses Google authentication for user login.
